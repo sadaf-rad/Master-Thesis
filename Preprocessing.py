@@ -30,3 +30,7 @@ print(data_t.groupby(['year', 'month']).size())
 G = nx.from_pandas_edgelist(data_t, source='source', target='target', edge_attr=['weight'], create_using=nx.DiGraph())
 
 print(f"✅ Graph Created with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
+
+# Mapping the Blockchain Address in both datasets
+data_u["xDAI_blockchain_address"] = data_u["xDAI_blockchain_address"].astype(str).str.strip().str.lower()
+
