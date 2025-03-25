@@ -29,4 +29,8 @@ print(data_t.groupby(['year', 'month']).size())
 # Creating The Directed Graph
 G = nx.from_pandas_edgelist(data_t, source='source', target='target', edge_attr=['weight'], create_using=nx.DiGraph())
 
+<<<<<<< HEAD
 print(f" Graph Created with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
+=======
+print(f"Graph Created with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
+>>>>>>> e9ca15db039ed4d2f3786ef504e343a3604253ab
